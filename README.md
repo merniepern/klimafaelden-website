@@ -27,7 +27,7 @@ Generally speaking, it is necessary to set up a combination of an operating syst
 
 The Wordpress Duplicator plug-in makes it very easy to copy a Wordpress website from one environment to another environment, hence its recommended to use this after having set up your LDE. 
 
-Even though the Duplicator plug-in *should* override any exisiting Wordpress installation in the folder it is set to run, it is still recommended **not to** initiate the Wordpress installation process in your LDE after having set it up. This is to be entirely sure not residual data of the old installation persists in the installation as created by Duplicator.
+Even though the Duplicator plug-in *should* override any exisiting Wordpress installation in the folder it is set to run, it is still recommended **not** to initiate the Wordpress installation process in your LDE after having set it up. This is to be entirely sure no residual data from the old installation persists in the installation created by Duplicator.
 
 A guide on how to migrate a live wordpress site to a LDE use Duplicator can be found [**here**](https://www.wpbeginner.com/wp-tutorials/how-to-move-live-wordpress-site-to-local-server/).
 
@@ -37,7 +37,7 @@ Please create a separate branch to keep track of the changes you make locally an
 
 To encourage this workflow, the main branch is protected from being pushed to and only allows merging through a pull request. Administrators of this project can obviously overrule these restrictions and lone developers will most probably be approving their own pull request. Hence these restrictions should be regarded more as encouragements for best practice than robust systems to prevent bogus code from being pushed to production.
 
-You will most probably be able to limit the changes you make to the `wp-content/themes/` and `wp-content/plugins/` folders. If not, update the `.gitignore` file accordingly. **Be careful when modifying the .gitignore, as publishing for instance the `wp-config.php` file could results in the production database password being exposed to the world. A subsequent removal of this password from the entire Git history would be a PITA, preferably avoided.**
+You will most probably be able to limit the changes you make to the `wp-content/themes/` and `wp-content/plugins/` folders. If not, update the `.gitignore` file accordingly. **Be careful when modifying the `.gitignore` file, as publishing for instance the `wp-config.php` file could results in the production database password being exposed to the world. A subsequent removal of this password from the entire Git history would be a PITA, preferably avoided.**
 
 ### Publishing your changes to production
 
