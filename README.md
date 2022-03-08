@@ -41,4 +41,3 @@ You will most probably be able to limit the changes you make to the `wp-content/
 
 ### Publishing your changes to production
 
-test
