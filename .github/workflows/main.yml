@@ -22,7 +22,7 @@ jobs:
           echo "${{secrets.DEPLOY_SSH_PASS}}" > deploy_pass
           chmod 600 ./deploy_key
           chmod 600 ./deploy_pass
-          rsync -chav --delete --password-file=deploy_pass \
+          sshpass -f ~/.deploy_pass rsync -chav --delete --password-file=deploy_pass \
             -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
             --exclude /deploy_key \
             --exclude /deploy_pass \
