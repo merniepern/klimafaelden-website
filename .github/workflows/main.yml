@@ -17,7 +17,7 @@ jobs:
         env:
           dest: 'klimafaelden.dk@linux374.unoeuro.com:/var/www/klimafaelden.dk/public_html/'
         run: |
-          echo "${{secrets.DEPLOY_SSH_KEY" > deploy_key
+          echo "${{secrets.DEPLOY_SSH_KEY}}" > deploy_key
           chmod 600 ./deploy_key
           rsync -chav --delete \
             -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
