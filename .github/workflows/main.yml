@@ -19,10 +19,13 @@ jobs:
           dest: 'klimafaelden.dk@linux374.unoeuro.com:/var/www/klimafaelden.dk/public_html/'
         run: |
           echo "${{secrets.DEPLOY_SSH_KEY}}" > deploy_key
+          echo "${{secrets.DEPLOY_SSH_PASS}}" > deploy_pass
           chmod 600 ./deploy_key
-          rsync -chav --delete \
+          chmod 600 ./deploy_pass
+          rsync -chav --delete --password-file=deploy_pass \
             -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
             --exclude /deploy_key \
+            --exclude /deploy_pass \
             --exclude /.git/ \
             --exclude /.github/ \
             --exclude /.gitignore \
