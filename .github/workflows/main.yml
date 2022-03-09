@@ -30,4 +30,4 @@ jobs:
             --exclude /.github/ \
             --exclude /.gitignore \
             --exclude /README.md \
-            ./ ${{env.dest}}
+            ./* ${{env.dest}}
