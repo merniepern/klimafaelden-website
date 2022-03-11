@@ -809,7 +809,7 @@ class Posterity_Framework
             'facebook'    => array( 'fa fa-facebook', 'Facebook' ),
             'flickr'      => array( 'fa fa-flickr', 'Flickr' ),
             'foursquare'  => array( 'fa fa-foursquare', 'Foursquare' ),
-            'github'      => array( 'fa fa-git', 'Github' ),
+            'github'      => array( 'fa fa-github', 'Github' ),
             'googleplus'  => array( 'fa fa-google-plus', 'Google Plus' ),
             'instagram'   => array( 'fa fa-instagram', 'Instagram' ),
             'lastfm'      => array( 'fa fa-lastfm', 'Lastfm' ),
@@ -839,6 +839,7 @@ class Posterity_Framework
             'yahoo'       => array( 'fa fa-yahoo', 'Yahoo' ),
             'yelp'        => array( 'fa fa-yelp', 'Yelp' ),
             'youtube'     => array( 'fa fa-youtube', 'YouTube' ),
+            'dukop'       => array( 'fa fa-adjust', 'DukOp'),
         );
 
         $icons = apply_filters('posterity_social_icons_list', $icons );
